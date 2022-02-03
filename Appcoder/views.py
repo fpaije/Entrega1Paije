@@ -36,3 +36,5 @@ def curso_formulario(request):
     
     return render(request, 'Appcoder/curso_formulario.html', {"miformulario": miformulario})
 
+#cambios par from django.views.generic import CreateView
+
