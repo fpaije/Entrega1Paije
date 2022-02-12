@@ -1,27 +1,26 @@
 from django.db import models
+from django.conf import settings
+from ProyectoCoder.settings import *
 
 # Create your models here.
 
-class Curso(models.Model):
-    
+class Grupo(models.Model):
+    nombregrupo = models.CharField(max_length=40)
+    actividad = models.CharField(max_length=40)
+
+class NotaGrupo(models.Model):
+    nombregrupo = models.CharField(max_length=40)
+    actividad = models.CharField(max_length=40)
+    nota = models.IntegerField()
+
+class Alumno(models.Model):
     nombre = models.CharField(max_length=40)
-    camada = models.IntegerField()
-
-class Estudiante(models.Model):
-    
-    nombre = models.CharField(max_length=30)
-    apellido = models.CharField(max_length=30)
+    apellido = models.CharField(max_length=40)
     email = models.EmailField()
+    actividad = models.CharField(max_length=40)
 
-class Profesor(models.Model):
-    
-    nombre = models.CharField(max_length=30)
-    apellido = models.CharField(max_length=30)
-    email = models.EmailField()
-    profesion = models.CharField(max_length=30)
-
-class Entregable(models.Model):
-    
-    nombre = models.CharField(max_length=30)
-    fecha_de_entrega = models.DateField()
-    entregado = models.BooleanField()
+class NotaAlumno(models.Model):
+    nombre = models.CharField(max_length=40)
+    apellido = models.CharField(max_length=40)
+    actividad = models.CharField(max_length=40)
+    nota = models.IntegerField()

@@ -1,0 +1,27 @@
+<p> Estamos mostrando notas para el: {{nombregrupo}}</p>
+
+{%if actividad %}
+
+<ul>
+    {% for Grupo in actividad %}
+
+    <li> Nota para {{Grupo.actividad}} = {{Grupo.nota}} </li>
+
+    {% endfor %}
+</ul>
+
+
+<body>
+    <nav class="navbar navbar-light bg-light static-top">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'Inicio' %}">Inicio</a>
+            - - - - -
+            <a class="navbar-brand" href="{% url 'busquedaGrupo' %}">Otra Búsqueda</a>
+</body>
+
+{% else %}
+
+<p>No hay datos para ese grupo</p> 
+
+{% endif %}
+
