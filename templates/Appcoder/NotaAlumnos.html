@@ -2,13 +2,11 @@
 
 {% block ContenidoQueCambia %}
 
-<form action="{% url 'AppcoderCursoFormulario' %}" method="POST" >{% csrf_token %}
-<!--    <p>Curso: <input type="text" name="curso" /></p> 
-        <p>Camada: <input type="number" name="camada" /></p> -->
+<form action="{% url 'NotaAlumnos' %}" method="POST" >{% csrf_token %}
     <table>
         {{ miformulario.as_table }}
     </table>
-    
+  
     <input type="submit" value="Enviar" />
 </form>
 
