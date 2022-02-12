@@ -1,6 +1,6 @@
 from django.db import models
 from django.conf import settings
-from ProyectoCoder.settings import *
+from Entrega1Paije.settings import *
 
 # Create your models here.
 
