@@ -3,10 +3,10 @@ from Appcoder.models import *
 
 # Register your models here.
 
-admin.site.register(Curso)
+admin.site.register(Grupo)
 
-admin.site.register(Estudiante)
+admin.site.register(NotaGrupo)
 
-admin.site.register(Profesor)
+admin.site.register(Alumno)
 
-admin.site.register(Entregable)
+admin.site.register(NotaAlumno)
